@@ -1,0 +1,13 @@
+CNN-GRU DDoS Detection Model - Inference Results
+==================================================
+Model: models/cnn_gru_model_PSO_UDP_14_aug_decimal_scaling.h5
+Test Data: test_data/x_test_decimal_udp_data.npy
+Test Labels: test_data/y_test_decimal_udp_labels.npy
+Samples: 19996
+
+Performance Metrics:
+Accuracy: 0.9984
+
+Confusion Matrix:
+[[ 9920    31]
+ [    0 10045]]

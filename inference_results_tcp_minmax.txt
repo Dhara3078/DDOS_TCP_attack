@@ -1,0 +1,13 @@
+CNN-GRU DDoS Detection Model - Inference Results
+==================================================
+Model: models/cnn_gru_model_PSO_TCP_12_aug_minmax_scaling.h5
+Test Data: test_data/x_test_minmax_tcp_data.npy
+Test Labels: test_data/y_test_minmax_tcp_labels.npy
+Samples: 20009
+
+Performance Metrics:
+Accuracy: 0.9989
+
+Confusion Matrix:
+[[ 9916    11]
+ [   12 10070]]
