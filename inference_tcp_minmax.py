@@ -84,8 +84,16 @@ def main():
                 
         # Run inference
         print("\n3. Running inference...")
-        y_pred = model.predict(x_test)
-        y_pred_classes = (y_pred > 0.5).astype("int32")
+        y_pred = np.array([])
+        for data in x_test[:100]:
+            pred = model.predict(np.expand_dims(data, axis=0))
+            y_pred = np.append(y_pred, pred > 0.5)
+            
+            if pred > 0.5:
+                print("DDoS Attack Detected, Shutting down the system")
+            
+        y_pred_classes = model.predict(x_test)
+        y_pred_classes = (y_pred_classes > 0.5).astype("int32")
 
         # Evaluate model
         print("\n4. Evaluating model performance...")
